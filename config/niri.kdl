@@ -1,11 +1,13 @@
 spawn-at-startup "noctalia-shell"
 
 binds {
+    // Apps
     Mod+T { spawn "alacritty"; }
-    Mod+Space { spawn "noctalia-shell-ipc" "toggle" "launcher"; }
     Mod+Q { close-window; }
     Mod+Shift+E { quit; }
     Mod+F { fullscreen-window; }
+
+    // Navigation
     Mod+Left { focus-column-left; }
     Mod+Right { focus-column-right; }
     Mod+Up { focus-workspace-up; }
@@ -13,4 +15,16 @@ binds {
     Mod+Shift+Left { move-column-left; }
     Mod+Shift+Right { move-column-right; }
     Alt+Tab { toggle-overview; }
+
+    // Noctalia
+    Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+S { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+Comma { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+
+    // Audio & Brightness
+    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
+    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
+    XF86AudioMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+    XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
+    XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 }
