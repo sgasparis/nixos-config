@@ -10,4 +10,5 @@ binds {
     Mod+Down { focus-workspace-down; }
     Mod+Shift+Left { move-column-left; }
     Mod+Shift+Right { move-column-right; }
+    Alt+Tab { toggle-overview; }
 }
