@@ -136,7 +136,6 @@
   # Asus Support
   services.asusd = {
     enable = true;
-    enableUserService = true;
   };
 
   # Ensure DBus is ready before asusd starts
