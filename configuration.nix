@@ -63,24 +63,26 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  #services.xserver.videoDrivers = [ "nvidia" ];
 
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    powerManagement.finegrained = true;
-    open = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-      amdgpuBusId = "PCI:197:0:0";
-      nvidiaBusId = "PCI:196:0:0";
-    };
-  };
+  #hardware.nvidia = {
+  #  modesetting.enable = true;
+  #  powerManagement.enable = true;
+  #  powerManagement.finegrained = true;
+  #  open = true;
+  #  nvidiaSettings = true;
+  #  package = config.boot.kernelPackages.nvidiaPackages.stable;
+  #  prime = {
+  #    offload = {
+  #      enable = true;
+  #      enableOffloadCmd = true;
+  #    };
+  #    amdgpuBusId = "PCI:197:0:0";
+  #    nvidiaBusId = "PCI:196:0:0";
+  #  };
+  #};
+
+  boot.blacklistedKernelModules = [ "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_uvm" ];
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
@@ -137,9 +139,14 @@
   git
   emacs
   alacritty
-  waybar
-  wofi
-  swaylock
+  spotify
+  docker
+  docker-compose
+  kubectl
+  kubeadm
+  ansible
+  terraform
+  argocd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
