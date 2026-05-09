@@ -23,23 +23,8 @@
 
   programs.noctalia-shell = {
     enable = true;
-    settings = {
-      colorSchemes = {
-        darkMode = true;
-        predefinedScheme = "Catppuccin";
-      };
-      bar = {
-        position = "top";
-        widgets.left = [{ type = "ActiveWindow"; }];
-        widgets.center = [{ type = "Workspace"; }];
-        widgets.right = [
-          { type = "Volume"; }
-          { type = "Battery"; }
-          { type = "Clock"; }
-        ];
-      };
-    };
   };
 
   xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
+  xdg.configFile."quickshell/noctalia/settings.json".source = ./config/noctalia/settings.json;
 }

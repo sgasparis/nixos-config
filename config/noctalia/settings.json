@@ -1,0 +1,22 @@
+{
+  "bar": {
+    "position": "top",
+    "widgets": {
+      "left": [
+        { "type": "ActiveWindow" }
+      ],
+      "center": [
+        { "type": "Workspace" }
+      ],
+      "right": [
+        { "type": "Volume" },
+        { "type": "Battery" },
+        { "type": "Clock" }
+      ]
+    }
+  },
+  "colorSchemes": {
+    "darkMode": true,
+    "predefinedScheme": "Catppuccin"
+  }
+}
