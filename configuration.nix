@@ -154,7 +154,6 @@
   #  wget
   curl
   git
-  emacs
   alacritty
   spotify
   docker
