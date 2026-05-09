@@ -130,6 +130,9 @@
   # Nix Command and Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Asus Support
+  services.asusd.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -146,6 +149,7 @@
   ansible
   terraform
   argocd
+  asusctl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
