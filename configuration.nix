@@ -111,6 +111,16 @@
     #media-session.enable = true;
   };
 
+  # Thunar Dependencies
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;  # thumbnail support
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gtk";
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

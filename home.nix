@@ -11,6 +11,10 @@
     htop
     ripgrep
     obsidian
+    xdg-utils
+    thunar
+    gvfs
+    thunar-volman
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 

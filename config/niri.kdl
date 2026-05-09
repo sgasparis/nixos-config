@@ -56,6 +56,7 @@ binds {
     Mod+L { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     Mod+C { spawn "noctalia-shell" "ipc" "call" "calendar" "toggle"; }
     Mod+K { spawn "asusctl" "leds" "next"; }
+
     // Navigation
     Mod+Left { focus-column-left; }
     Mod+Right { focus-column-right; }
