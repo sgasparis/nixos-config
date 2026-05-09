@@ -1,0 +1,13 @@
+binds {
+    Mod+T { spawn "alacritty"; }
+    Mod+R { spawn "wofi" "--show" "run"; }
+    Mod+Q { close-window; }
+    Mod+Shift+E { quit; }
+    Mod+F { fullscreen-window; }
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-workspace-up; }
+    Mod+Down { focus-workspace-down; }
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+}
