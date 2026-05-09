@@ -176,6 +176,11 @@
   neovim
   yazi
   sshfs
+  unar
+  ffmpegthumbnailer
+  poppler
+  fd
+  fzf
   ];
 
 
