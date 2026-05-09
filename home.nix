@@ -28,12 +28,6 @@
     enable = true;
   };
 
-  programs.spicetify = {
-    enable = true;
-    theme = inputs.spicetify-nix.legacyPackages.${pkgs.system}.themes.comfy;
-    colorScheme = "dark";
-  };
-
   xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
   xdg.configFile."quickshell/noctalia/settings.json".source = ./config/noctalia/settings.json;
 }
