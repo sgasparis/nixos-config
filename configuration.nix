@@ -128,10 +128,9 @@
   users.users.unknown = {
     isNormalUser = true;
     description = "unknown";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "docker" "input" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = with pkgs; [];
   };
 
   # Allow unfree packages
@@ -164,7 +163,7 @@
   #  wget
   curl
   git
-  alacritty
+  kitty
   spotify
   docker
   docker-compose
@@ -183,7 +182,8 @@
   fzf
   ];
 
-
+  # Shell Support with ZSH
+  programs.zsh.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
