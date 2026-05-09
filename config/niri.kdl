@@ -38,7 +38,12 @@ layer-rule {
   }
 }
 
-
+input {
+    touchpad {
+        tap
+        natural-scroll
+    }
+}
 
 binds {
     // System
