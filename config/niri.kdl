@@ -42,6 +42,7 @@ input {
     touchpad {
         tap
         natural-scroll
+        dwt
     }
 }
 
