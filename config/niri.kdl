@@ -16,6 +16,7 @@ binds {
     Mod+Down { focus-workspace-down; }
     Mod+Shift+Left { move-column-left; }
     Mod+Shift+Right { move-column-right; }
+    Mod+R { switch-preset-column-width; }
     Alt+Tab { toggle-overview; }
 
     // Noctalia
