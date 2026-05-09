@@ -1,25 +1,8 @@
 spawn-at-startup "noctalia-shell"
 
-layout {
-    gaps 16
-    
-    border {
-        enable true
-        width 2
-        active-color "#89b4fa"
-        inactive-color "#313244"
-    }
-
-    focus-ring {
-        off
-    }
-}
-
-prefer-no-csd
-
 window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
+  geometry-corner-radius 20
+  clip-to-geometry true
 }
 
 binds {
