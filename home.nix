@@ -14,8 +14,8 @@
   programs.git = {
     enable = true;
     settings = {
-      user.name = "your name";
-      user.email = "your email";
+      user.name = "sgapsaris";
+      user.email = "gasparis.steven@proton.me";
       init.defaultBranch = "main";
       pull.rebase = false;
     };
