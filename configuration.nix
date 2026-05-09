@@ -134,8 +134,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Asus Support
-  services.asusd.enable = true;
-
   services.asusd = {
     enable = true;
     enableUserService = true;
