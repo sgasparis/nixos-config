@@ -14,6 +14,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Latest kernel for ProArt PX13 hardware support
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -132,6 +135,17 @@
 
   # Asus Support
   services.asusd.enable = true;
+
+  services.asusd = {
+    enable = true;
+    enableUserService = true;
+  };
+
+  # Ensure DBus is ready before asusd starts
+  systemd.services.asusd = {
+    after = [ "dbus.service" ];
+    wants = [ "dbus.service" ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
