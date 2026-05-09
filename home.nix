@@ -1,15 +1,14 @@
-{ pkgs, lib, ... }: {
+{ pkgs, inputs, ... }: {
   home.username = "unknown";
   home.homeDirectory = "/home/unknown";
   home.stateVersion = "25.11";
+
+  imports = [ inputs.noctalia.homeModules.default ];
 
   home.packages = with pkgs; [
     htop
     ripgrep
     alacritty
-    waybar
-    wofi
-    swaylock
   ];
 
   programs.git = {
@@ -19,6 +18,26 @@
       user.email = "your email";
       init.defaultBranch = "main";
       pull.rebase = false;
+    };
+  };
+
+  programs.noctalia-shell = {
+    enable = true;
+    settings = {
+      colorSchemes = {
+        darkMode = true;
+        predefinedScheme = "Catppuccin";
+      };
+      bar = {
+        position = "top";
+        widgets.left = [{ type = "ActiveWindow"; }];
+        widgets.center = [{ type = "Workspace"; }];
+        widgets.right = [
+          { type = "Volume"; }
+          { type = "Battery"; }
+          { type = "Clock"; }
+        ];
+      };
     };
   };
 
