@@ -174,6 +174,8 @@
   argocd
   asusctl
   neovim
+  yazi
+  sshfs
   ];
 
 
