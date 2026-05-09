@@ -3,7 +3,10 @@
   home.homeDirectory = "/home/unknown";
   home.stateVersion = "25.11";
 
-  imports = [ inputs.noctalia.homeModules.default ];
+  imports = [
+    inputs.noctalia.homeModules.default
+    inputs.spicetify-nix.homeManagerModules.default
+  ];
 
   home.packages = with pkgs; [
     htop
@@ -14,7 +17,7 @@
   programs.git = {
     enable = true;
     settings = {
-      user.name = "sgapsaris";
+      user.name = "sgasparis";
       user.email = "gasparis.steven@proton.me";
       init.defaultBranch = "main";
       pull.rebase = false;
@@ -23,6 +26,12 @@
 
   programs.noctalia-shell = {
     enable = true;
+  };
+
+  programs.spicetify = {
+    enable = true;
+    theme = inputs.spicetify-nix.legacyPackages.${pkgs.system}.themes.comfy;
+    colorScheme = "dark";
   };
 
   xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
