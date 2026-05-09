@@ -1,5 +1,17 @@
 spawn-at-startup "noctalia-shell"
 
+layout {
+    gaps 8
+    border {
+        width 1
+        active-color "#89b4fa"
+        inactive-color "#313244"
+    }
+    focus-ring {
+        off
+    }
+}
+
 window-rule {
   geometry-corner-radius 16
   clip-to-geometry true
@@ -44,6 +56,8 @@ binds {
     Mod+Down { focus-workspace-down; }
     Mod+Shift+Left { move-column-left; }
     Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up { move-workspace-up; }
+    Mod+Shift+Down { move-workspace-down; }
     Mod+R { switch-preset-column-width; }
     Alt+Tab { toggle-overview; }
 
