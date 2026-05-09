@@ -138,6 +138,12 @@
     enable = true;
   };
 
+  # Fan Support
+  environment.etc."asusd/fan_curves.ron" = {
+    source = ./config/asusd/fan_curves.ron;
+    mode = "0644";
+  };
+
   # Ensure DBus is ready before asusd starts
   systemd.services.asusd = {
     after = [ "dbus.service" ];
