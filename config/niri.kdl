@@ -1,11 +1,13 @@
 spawn-at-startup "noctalia-shell"
 
 binds {
-    // Apps
+    // System
     Mod+T { spawn "alacritty"; }
     Mod+Q { close-window; }
     Mod+Shift+E { quit; }
     Mod+F { fullscreen-window; }
+    Mod+L { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+    Mod+C { spawn "noctalia-shell" "ipc" "call" "calendar" "toggle"; }
 
     // Navigation
     Mod+Left { focus-column-left; }
