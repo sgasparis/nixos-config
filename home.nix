@@ -10,6 +10,8 @@
   home.packages = with pkgs; [
     htop
     ripgrep
+    obsidian
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.git = {
