@@ -164,6 +164,7 @@
   terraform
   argocd
   asusctl
+  neovim
   ];
 
 
