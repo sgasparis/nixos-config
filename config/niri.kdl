@@ -1,3 +1,5 @@
+spawn-at-startup "noctalia-shell"
+
 binds {
     Mod+T { spawn "alacritty"; }
     Mod+R { spawn "wofi" "--show" "run"; }
