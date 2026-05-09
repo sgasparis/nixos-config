@@ -10,7 +10,6 @@
   home.packages = with pkgs; [
     htop
     ripgrep
-    discord
   ];
 
   programs.git = {
