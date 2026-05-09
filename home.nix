@@ -11,6 +11,7 @@
     htop
     ripgrep
     alacritty
+    discord
   ];
 
   programs.git = {
