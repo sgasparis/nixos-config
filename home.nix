@@ -5,7 +5,6 @@
 
   imports = [
     inputs.noctalia.homeModules.default
-    inputs.spicetify-nix.homeManagerModules.default
   ];
 
   home.packages = with pkgs; [
