@@ -2,7 +2,7 @@ spawn-at-startup "noctalia-shell"
 
 binds {
     Mod+T { spawn "alacritty"; }
-    Mod+R { spawn "wofi" "--show" "run"; }
+    Mod+Space { spawn "noctalia-shell-ipc" "toggle" "launcher"; }
     Mod+Q { close-window; }
     Mod+Shift+E { quit; }
     Mod+F { fullscreen-window; }
