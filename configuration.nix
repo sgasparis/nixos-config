@@ -115,7 +115,7 @@
   users.users.unknown = {
     isNormalUser = true;
     description = "unknown";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "input" ];
     packages = with pkgs; [
     #  thunderbird
     ];
