@@ -143,7 +143,6 @@
   docker
   docker-compose
   kubectl
-  kubeadm
   ansible
   terraform
   argocd
