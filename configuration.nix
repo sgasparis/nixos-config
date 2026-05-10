@@ -185,6 +185,7 @@
   claude-code
   podman-compose
   cockpit
+  cockpit-podman
   ];
 
   # Shell Support with ZSH
