@@ -34,7 +34,7 @@
 
   programs.starship = {
     enable = true;
-  }
+  };
 
   xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
   xdg.configFile."quickshell/noctalia/settings.json".source = ./config/noctalia/settings.json;
