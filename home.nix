@@ -36,7 +36,12 @@
     enable = true;
   };
 
+  programs.kitty = {
+    enable = true;
+  };
+
   xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
   xdg.configFile."quickshell/noctalia/settings.json".source = ./config/noctalia/settings.json;
   xdg.configFile."starship.toml".source = ./config/starship/starship.toml;
+  xdg.configFile."kitty/kitty.conf".source = ./config/kitty/kitty.conf;
 }
