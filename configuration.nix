@@ -184,11 +184,13 @@
   zoxide
   claude-code
   podman-compose
+  cockpit
   ];
 
   # Shell Support with ZSH
   programs.zsh.enable = true;
 
+  # Virtualization
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
@@ -196,6 +198,16 @@
     autoPrune = {
       enable = true;
       dates = "weekly";
+    };
+  };
+
+  services.cockpit = {
+    enable = true;
+    port = 9090;
+    settings = {
+      WebService = {
+        AllowUnencrypted = true;
+      };
     };
   };
 
