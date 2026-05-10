@@ -180,6 +180,8 @@
   poppler
   fd
   fzf
+  bat
+  eza
   ];
 
   # Shell Support with ZSH

@@ -40,6 +40,35 @@
     enable = true;
   };
 
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+  
+    initExtra = ''
+      eval "$(starship init zsh)"
+    '';
+
+    shellAliases = {
+      ll = "ls -la";
+      k = "kubectl";
+      tf = "terraform";
+      cat = "bat";
+      ls = "eza --icons";
+      tree = "eza --tree --icons";
+      mount-proxmox = "sshfs root@192.168.x.x:/ ~/mounts/proxmox";
+      unmount-proxmox = "fusermount -u ~/mounts/proxmox";
+    };
+
+    history = {
+      size = 10000;
+      save = 10000;
+      share = true;
+      ignoreDups = true;
+    };
+  };
+
+  # Config Files
   xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
   xdg.configFile."quickshell/noctalia/settings.json".source = ./config/noctalia/settings.json;
   xdg.configFile."starship.toml".source = ./config/starship/starship.toml;
