@@ -184,6 +184,7 @@
   eza
   trash-cli
   zoxide
+  claude-code
   ];
 
   # Shell Support with ZSH
