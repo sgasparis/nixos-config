@@ -49,7 +49,7 @@ input {
 
 binds {
     // System
-    Mod+T { spawn "kitty"; }
+    Mod+Enter { spawn "kitty"; }
     Mod+Q { close-window; }
     Mod+Shift+E { quit; }
     Mod+F { fullscreen-window; }
