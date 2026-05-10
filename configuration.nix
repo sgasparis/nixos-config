@@ -129,7 +129,7 @@
     isNormalUser = true;
     description = "unknown";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "docker" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "podman" "input" ];
     packages = with pkgs; [];
   };
 
@@ -165,8 +165,6 @@
   git
   kitty
   spotify
-  docker
-  docker-compose
   kubectl
   ansible
   terraform
@@ -185,10 +183,22 @@
   trash-cli
   zoxide
   claude-code
+  podman-compose
   ];
 
   # Shell Support with ZSH
   programs.zsh.enable = true;
+
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
+    autoPrune = {
+      enable = true;
+      dates = "weekly";
+    };
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

@@ -61,6 +61,7 @@
       cdi = "zi";
       mount-proxmox = "sshfs root@192.168.x.x:/ ~/mounts/proxmox";
       unmount-proxmox = "fusermount -u ~/mounts/proxmox";
+      docker = "podman";
     };
 
     history = {
