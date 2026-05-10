@@ -170,7 +170,6 @@
   terraform
   argocd
   asusctl
-  neovim
   yazi
   sshfs
   unar
