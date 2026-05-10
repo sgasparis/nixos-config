@@ -1,0 +1,25 @@
+add_newline = true
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[kubernetes]
+disabled = false
+symbol = "⎈ "
+style = "bold blue"
+
+[terraform]
+disabled = false
+symbol = "💠 "
+
+[directory]
+truncation_length = 3
+style = "bold cyan"
+
+[aws]
+disabled = true
