@@ -47,6 +47,7 @@
   
     initExtra = ''
       eval "$(starship init zsh)"
+      eval "$(zoxide init zsh)"
     '';
 
     shellAliases = {
@@ -68,6 +69,11 @@
       share = true;
       ignoreDups = true;
     };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   # Config Files

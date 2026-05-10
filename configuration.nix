@@ -182,6 +182,8 @@
   fzf
   bat
   eza
+  trash-cli
+  zoxide
   ];
 
   # Shell Support with ZSH
