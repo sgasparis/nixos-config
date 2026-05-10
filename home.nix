@@ -16,6 +16,10 @@
     gvfs
     thunar-volman
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    dbeaver-bin
+    zed-editor
+    helix
+    remmina
   ];
 
   programs.git = {
