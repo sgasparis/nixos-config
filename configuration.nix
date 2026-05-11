@@ -211,6 +211,13 @@
     };
   };
 
+  # Garbage Collection
+  nix.gc = {
+    automatic = true;
+    dates = "03:15";
+    options = "--delete-older-than 15d";
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
